@@ -110,16 +110,14 @@ namespace PassMan
           
         }
 
-        private static string EncryptPasswordToString(NetworkCredential cred){ 
+        private static string EncryptPasswordToString(NetworkCredential cred)
+        { 
 
-            var salt =  BCrypt.Net.BCrypt.GenerateSalt();
-
-            return BCrypt.Net.BCrypt.HashPassword(cred.Password, salt);
+            return BCrypt.Net.BCrypt.HashPassword(cred.Password, BCrypt.Net.BCrypt.GenerateSalt());
         }
 
-        private static bool Login(NetworkCredential cred, List<string> list){
-
-            // var compArr = EncryptPasswordToByteArray(cred);
+        private static bool Login(NetworkCredential cred, List<string> list)
+        {
 
             for(int i = 0; i < list.Count; i++)
             {  
@@ -132,27 +130,3 @@ namespace PassMan
         }
     }
 }
-
-        // private static byte[] EncryptPasswordToByteArray(NetworkCredential cred){
-            
-
-        //     return sHA.ComputeHash(ASCIIEncoding.ASCII.GetBytes(cred.Password));
-        // }
-
-            //     byte[] item = ASCIIEncoding.ASCII.GetBytes(list[i]);
-            //     bool isValid = false;
-
-            //     Console.WriteLine("{0}, {1}", item.Length, compArr.Length);
-                
-            //     for(int j = 0; j < item.Length; j++){
-
-            //         if(item.Length == compArr.Length && item[j] == compArr[j]){
-            //             isValid = true;
-            //         }
-            //         else{
-            //             isValid = false;
-            //         }                  
-            //     }
-
-            //     if(isValid)
-            //         return true;    
