@@ -11,17 +11,14 @@ namespace PassMan
 {
     class Program
     {
-
-
-
         public static void Main()
         {
-            List<string> passwordList = new List<string>();
+            List<(string, string)> creds = new List<(string, string)>();
 
-            LoginMenu(passwordList);
+            LoginMenu(creds);
         }
 
-        private static void LoginMenu(List<string> list)
+        private static void LoginMenu(List<(string, string)> list)
         {
             Console.Clear();
             string dash = new string('-', 14);
@@ -56,7 +53,7 @@ namespace PassMan
             
         }
 
-        private static void CreateAccount(List<string> list)
+        private static void CreateAccount(List<(string, string)> list)
         {
             Console.Clear();
             NetworkCredential cred = new NetworkCredential();
@@ -70,12 +67,12 @@ namespace PassMan
             
             var encryptedPassword = EncryptPasswordToString(cred);
 
-            list.Add(encryptedPassword);
+            list.Add((cred.UserName, encryptedPassword));
 
             LoginMenu(list);
         }
 
-        private static void SignIn(List<string> list)
+        private static void SignIn(List<(string, string)> list)
         {
             Console.Clear();
             bool isValid = false;
@@ -91,7 +88,6 @@ namespace PassMan
 
                 Console.WriteLine("Enter password: ");
                 credentials.Password = Console.ReadLine();
-                // credentials.Password = EncryptPasswordToString(credentials);
  
                 if(Login(credentials, list))
                 {
@@ -116,12 +112,12 @@ namespace PassMan
             return BCrypt.Net.BCrypt.HashPassword(cred.Password, BCrypt.Net.BCrypt.GenerateSalt());
         }
 
-        private static bool Login(NetworkCredential cred, List<string> list)
+        private static bool Login(NetworkCredential cred, List<(string, string)> list)
         {
 
             for(int i = 0; i < list.Count; i++)
             {  
-                if(BCrypt.Net.BCrypt.Verify(cred.Password, list[i]))
+                if(BCrypt.Net.BCrypt.Verify(cred.Password, list[i].Item2) && cred.UserName.Equals(list[i].Item1))
                 {
                     return true;
                 }           
