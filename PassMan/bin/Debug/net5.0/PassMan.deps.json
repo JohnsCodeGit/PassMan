@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PassMan/1.0.0": {
+        "dependencies": {
+          "BCrypt.Net-Next.StrongName": "4.0.2"
+        },
+        "runtime": {
+          "PassMan.dll": {}
+        }
+      },
+      "BCrypt.Net-Next.StrongName/4.0.2": {
+        "runtime": {
+          "lib/net5.0/BCrypt.Net-Next.StrongName.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.0.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PassMan/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BCrypt.Net-Next.StrongName/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xi9ywSwZLR8zMKq+xWNiO/4/R+mlFXcnYBXsxVgqX6RppT1Z7+o1O7JIl+fGBYC0TskvBNO4TTaG30Y20jwOBg==",
+      "path": "bcrypt.net-next.strongname/4.0.2",
+      "hashPath": "bcrypt.net-next.strongname.4.0.2.nupkg.sha512"
+    }
+  }
+}

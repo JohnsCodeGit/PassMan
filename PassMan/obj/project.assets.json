@@ -1,11 +1,57 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "BCrypt.Net-Next.StrongName/4.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/BCrypt.Net-Next.StrongName.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BCrypt.Net-Next.StrongName.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BCrypt.Net-Next.StrongName/4.0.2": {
+      "sha512": "xi9ywSwZLR8zMKq+xWNiO/4/R+mlFXcnYBXsxVgqX6RppT1Z7+o1O7JIl+fGBYC0TskvBNO4TTaG30Y20jwOBg==",
+      "type": "package",
+      "path": "bcrypt.net-next.strongname/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.strongname.4.0.2.nupkg.sha512",
+        "bcrypt.net-next.strongname.nuspec",
+        "lib/net20/BCrypt.Net-Next.StrongName.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.StrongName.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net40/BCrypt.Net-Next.StrongName.dll",
+        "lib/net40/BCrypt.Net-Next.xml",
+        "lib/net452/BCrypt.Net-Next.StrongName.dll",
+        "lib/net452/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.StrongName.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.StrongName.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.StrongName.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.StrongName.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/netcoreapp3.1/BCrypt.Net-Next.StrongName.dll",
+        "lib/netcoreapp3.1/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.StrongName.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.StrongName.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "BCrypt.Net-Next.StrongName >= 4.0.2"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\johnm\\.nuget\\packages\\": {}
@@ -43,6 +89,12 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "BCrypt.Net-Next.StrongName": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

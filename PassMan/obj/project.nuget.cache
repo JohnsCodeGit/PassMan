@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mRHZf2FyK/XCmXcq5gp27vW1q0ab7vvX2TMfqaKS25AKnFYG0j4mkqstToIuYWhwXo8osTry1akc/UwYpwyiEA==",
+  "dgSpecHash": "E4+5oUHba81HVa7wKarmqZibnpes7EVmZUaTsY5qtfOlbZnycYKzRC/2CmMF92mnMfxHH5Q2aa9MroWKZLPs/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\johnm\\OneDrive\\Programming\\PassMan\\PassMan\\PassMan.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\johnm\\.nuget\\packages\\bcrypt.net-next.strongname\\4.0.2\\bcrypt.net-next.strongname.4.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
